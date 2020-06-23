@@ -1,0 +1,34 @@
+
+
+1. Once added as a collaborator , we will get an invitation in the mail.
+   >>Accept the invitation.
+
+2. Clone the repository: 
+	>>On github.com select the repository and click on clone or download button and copy the URL link.
+	>> Go to Git bash and enter the command to clone:
+	  $ git clone https://github.com/ShwetMe/MyNewRepository.git
+	>> After cloning is successfully done check the repository is created or not using below command:	
+      $ dir
+	>> Navigate to that directory:
+	   $ cd MyNewRepository
+	>> Current branch will be a master branch. Create your own branch.
+	   $ git checkout -b BranchName
+	   This will create a branch and switch to that branch.
+3. Go to eclispe and add a new class or edit the existing class and save the changes.
+4. Committing and pushing the changes to Repository.
+	>> Navigate to GIT BASH and enter the command:
+	  $ git status
+	  This will give the current status ie display the changes(untracked files) which are not staged for commit in red color.
+	>> Add the changes to commit using below command:
+	   $ git add .
+	>> Commit the changes.
+	   $ git commit -m  "Committing Demo2"
+	>>Push the changes to the Repository.
+	  $ git push origin head
+	  It will ask for the username and password, enter the details and click on Login.
+5.  Pull Request:
+    >>Navigate to the GIT HUB -- Branch created and verify the changes.
+	>>Click on the Pull request and create a new pull request to move the changes from branch created to master branch.
+	>>Enter the comments and add the reviewer and click on submit.
+	>> The request will go to the reviewer for approval.
+   
