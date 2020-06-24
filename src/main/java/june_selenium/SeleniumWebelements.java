@@ -1,11 +1,13 @@
 package june_selenium;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class SeleniumWebelements {
 
@@ -27,6 +29,24 @@ public class SeleniumWebelements {
 			Male.click();
 			System.out.println(Female.isSelected());
 			System.out.println(Male.isSelected());
+			List<WebElement> checkboxes = driver.findElements(By.xpath("//input[@type = 'checkbox']"));
+			for(WebElement checkbox:checkboxes) {
+				if(!checkbox.isSelected()) {
+				checkbox.click();
+				}
+				}
+			for(WebElement checkbox:checkboxes) {
+				if(checkbox.getAttribute("value").equals("Automation")) {
+						checkbox.click();
+				}
+			}
+		
+			Select dropdown = new Select(driver.findElement(By.id("testingDropdown")));
+			dropdown.selectByValue("Performance");
+			List<WebElement> dropdowns = dropdown.getOptions();
+			for(WebElement e:dropdowns) {
+				System.out.println(e.getText());
+			}
 	}
 
 }
